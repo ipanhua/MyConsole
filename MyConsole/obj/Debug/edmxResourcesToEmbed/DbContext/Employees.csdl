@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeesEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="per_cal_type">
+    <Key>
+      <PropertyRef Name="ical_type" />
+    </Key>
+    <Property Name="ical_type" Type="Byte" Nullable="false" />
+    <Property Name="ccal_desc" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="per_degree">
+    <Key>
+      <PropertyRef Name="cDegree_code" />
+    </Key>
+    <Property Name="cDegree_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cDegree_desc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_dept">
+    <Key>
+      <PropertyRef Name="cDept_code" />
+    </Key>
+    <Property Name="cDept_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cDept_desc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cprt_group" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lfree_rest" Type="Boolean" Nullable="false" />
+    <Property Name="cdept_group" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ceng_desc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="cCal_salary" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cdept_group2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_floor">
+    <Key>
+      <PropertyRef Name="cFloor_code" />
+    </Key>
+    <Property Name="iFloor_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cFloor_code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cFloor_desc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_group">
+    <Key>
+      <PropertyRef Name="iGroup_ID" />
+    </Key>
+    <Property Name="iGroup_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cgroup_desc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="cDept_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="cStart_am" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="cEnd_am" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="cStart_noon" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="cEnd_noon" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="cStart_pm" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="cEnd_pm" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="cStart_tip" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="dAmend_date" Type="DateTime" />
+    <Property Name="cAmend_user" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_leave">
+    <Key>
+      <PropertyRef Name="iLeave_ID" />
+    </Key>
+    <Property Name="iLeave_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cWorker_no" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dFrom_date" Type="DateTime" />
+    <Property Name="dTo_Date" Type="DateTime" />
+    <Property Name="creason_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dAmend_Date" Type="DateTime" Nullable="false" />
+    <Property Name="cAmend_user" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cRemarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_nation">
+    <Key>
+      <PropertyRef Name="iNation_code" />
+    </Key>
+    <Property Name="iNation_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cNation_desc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_penalty">
+    <Key>
+      <PropertyRef Name="iID" />
+    </Key>
+    <Property Name="iID" Type="Int32" Nullable="false" />
+    <Property Name="dDate" Type="DateTime" />
+    <Property Name="cWorker_no" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cPenalty_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cReason" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nAmount" Type="Decimal" Nullable="false" />
+    <Property Name="dPost_date" Type="DateTime" />
+    <Property Name="cPost_user" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="dAmend_date" Type="DateTime" Nullable="false" />
+    <Property Name="cAmend_user" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_penalty_code">
+    <Key>
+      <PropertyRef Name="cPenalty_code" />
+    </Key>
+    <Property Name="cPenalty_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cPenalty_desc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iPenalty_type" Type="Byte" Nullable="false" />
+    <Property Name="lcount_flag" Type="Boolean" />
+    <Property Name="dAmend_date" Type="DateTime" />
+    <Property Name="cAmend_user" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="per_penalty_type">
+    <Key>
+      <PropertyRef Name="iType_ID" />
+    </Key>
+    <Property Name="iType_ID" Type="Byte" Nullable="false" />
+    <Property Name="cType_Desc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cElse_Field" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="dAmend_Date" Type="DateTime" />
+    <Property Name="cAmend_User" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="per_room">
+    <Key>
+      <PropertyRef Name="iRoom_ID" />
+    </Key>
+    <Property Name="iRoom_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cHouse" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cRoom_no" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iCapacity" Type="Int32" Nullable="false" />
+    <Property Name="nTotal_Chest" Type="Decimal" Nullable="false" />
+    <Property Name="nTotal_bed" Type="Decimal" Nullable="false" />
+    <Property Name="nTotal_bedstand" Type="Decimal" Nullable="false" />
+    <Property Name="nTotal_fanner" Type="Decimal" Nullable="false" />
+    <Property Name="nTotal_E_lamp" Type="Decimal" Nullable="false" />
+    <Property Name="nTotal_D_lamp" Type="Decimal" Nullable="false" />
+    <Property Name="iSex" Type="Byte" Nullable="false" />
+    <Property Name="iType" Type="Byte" Nullable="false" />
+    <Property Name="mRemarks" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="damend_date" Type="DateTime" Nullable="false" />
+    <Property Name="camend_user" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_sex">
+    <Key>
+      <PropertyRef Name="isex_code" />
+    </Key>
+    <Property Name="isex_code" Type="Byte" Nullable="false" />
+    <Property Name="csex_desc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="per_shoe">
+    <Key>
+      <PropertyRef Name="cShoe_code" />
+    </Key>
+    <Property Name="cShoe_code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cShoe_no" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_state">
+    <Key>
+      <PropertyRef Name="iState_code" />
+    </Key>
+    <Property Name="iState_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cState_Desc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_title">
+    <Key>
+      <PropertyRef Name="iTitle_ID" />
+    </Key>
+    <Property Name="iTitle_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cDept_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="cTitle_name" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="nper_num" Type="Decimal" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="nsubsidy_sal" Type="Decimal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_worker_type">
+    <Key>
+      <PropertyRef Name="iworker_type" />
+    </Key>
+    <Property Name="iworker_type" Type="Byte" Nullable="false" />
+    <Property Name="cworker_desc" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ntest_month" Type="Decimal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="cWorker_no" />
+      <PropertyRef Name="cName" />
+      <PropertyRef Name="cCard_ID" />
+      <PropertyRef Name="iWorker_type" />
+      <PropertyRef Name="iSex" />
+      <PropertyRef Name="cNation_code" />
+      <PropertyRef Name="cDegree_code" />
+      <PropertyRef Name="lMarried" />
+      <PropertyRef Name="cWorker_Id" />
+      <PropertyRef Name="cState_code" />
+      <PropertyRef Name="cFather_name" />
+      <PropertyRef Name="cMather_name" />
+      <PropertyRef Name="cHome_tel" />
+      <PropertyRef Name="cHome_address" />
+      <PropertyRef Name="cVoucher" />
+      <PropertyRef Name="cDept_code" />
+      <PropertyRef Name="iTitle_ID" />
+      <PropertyRef Name="iSal_type" />
+      <PropertyRef Name="iCal_type" />
+      <PropertyRef Name="nSalary" />
+      <PropertyRef Name="cAccount" />
+      <PropertyRef Name="iFloor_ID" />
+      <PropertyRef Name="iGroup_ID" />
+      <PropertyRef Name="cShoe_code" />
+      <PropertyRef Name="lNo_to_bank" />
+      <PropertyRef Name="lSafety_flag" />
+      <PropertyRef Name="cSafety_no" />
+      <PropertyRef Name="lCity_flag" />
+      <PropertyRef Name="remarks" />
+      <PropertyRef Name="cStop_meal" />
+      <PropertyRef Name="cScan_loc" />
+      <PropertyRef Name="cAmend_user" />
+      <PropertyRef Name="cUser_id" />
+      <PropertyRef Name="lSub_hot_flag" />
+      <PropertyRef Name="cbox_code" />
+      <PropertyRef Name="msrepl_tran_version" />
+      <PropertyRef Name="cSupervisor_No" />
+      <PropertyRef Name="cEngName" />
+      <PropertyRef Name="nOther_Subsidy" />
+      <PropertyRef Name="cOther_Subsidy_Remark" />
+    </Key>
+    <Property Name="cWorker_no" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cName" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dbirthday" Type="DateTime" />
+    <Property Name="cCard_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iWorker_type" Type="Byte" Nullable="false" />
+    <Property Name="iSex" Type="Byte" Nullable="false" />
+    <Property Name="cNation_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cDegree_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lMarried" Type="Boolean" Nullable="false" />
+    <Property Name="cWorker_Id" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cState_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cFather_name" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cMather_name" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cHome_tel" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cHome_address" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cVoucher" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dHire_date" Type="DateTime" />
+    <Property Name="cDept_code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iTitle_ID" Type="Int32" Nullable="false" />
+    <Property Name="iSal_type" Type="Byte" Nullable="false" />
+    <Property Name="iCal_type" Type="Byte" Nullable="false" />
+    <Property Name="nSalary" Type="Decimal" Nullable="false" />
+    <Property Name="nAllowance" Type="Decimal" />
+    <Property Name="dCurr_sal_date" Type="DateTime" />
+    <Property Name="cAccount" Type="String" MaxLength="19" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iFloor_ID" Type="Int32" Nullable="false" />
+    <Property Name="iGroup_ID" Type="Int32" Nullable="false" />
+    <Property Name="cShoe_code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dOut_date" Type="DateTime" />
+    <Property Name="cOut_reason" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="lNo_to_bank" Type="Boolean" Nullable="false" />
+    <Property Name="cNo_to_bank_reason" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="lSafety_flag" Type="Boolean" Nullable="false" />
+    <Property Name="cSafety_no" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lCity_flag" Type="Boolean" Nullable="false" />
+    <Property Name="lNew_subsidy" Type="Boolean" />
+    <Property Name="remarks" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cStop_meal" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cScan_loc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dAmend_date" Type="DateTime" />
+    <Property Name="cAmend_user" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cUser_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lSub_hot_flag" Type="Boolean" Nullable="false" />
+    <Property Name="cbox_code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dperiod_of_validity_date" Type="DateTime" />
+    <Property Name="dchg_title_date" Type="DateTime" />
+    <Property Name="msrepl_tran_version" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="nhot_subsidy" Type="Decimal" />
+    <Property Name="cSupervisor_No" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cEngName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nOther_Subsidy" Type="Decimal" Nullable="false" />
+    <Property Name="cOther_Subsidy_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="employees" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="per_cal_type" EntityType="Self.per_cal_type" />
+    <EntitySet Name="per_degree" EntityType="Self.per_degree" />
+    <EntitySet Name="per_dept" EntityType="Self.per_dept" />
+    <EntitySet Name="per_floor" EntityType="Self.per_floor" />
+    <EntitySet Name="per_group" EntityType="Self.per_group" />
+    <EntitySet Name="per_leave" EntityType="Self.per_leave" />
+    <EntitySet Name="per_nation" EntityType="Self.per_nation" />
+    <EntitySet Name="per_penalty" EntityType="Self.per_penalty" />
+    <EntitySet Name="per_penalty_code" EntityType="Self.per_penalty_code" />
+    <EntitySet Name="per_penalty_type" EntityType="Self.per_penalty_type" />
+    <EntitySet Name="per_room" EntityType="Self.per_room" />
+    <EntitySet Name="per_sex" EntityType="Self.per_sex" />
+    <EntitySet Name="per_shoe" EntityType="Self.per_shoe" />
+    <EntitySet Name="per_state" EntityType="Self.per_state" />
+    <EntitySet Name="per_title" EntityType="Self.per_title" />
+    <EntitySet Name="per_worker_type" EntityType="Self.per_worker_type" />
+    <EntitySet Name="employee" EntityType="Self.employee" />
+  </EntityContainer>
+</Schema>

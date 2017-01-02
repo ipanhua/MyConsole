@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeesEntities.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“def.employees.employee”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="cWorker_no" />
+      <PropertyRef Name="cName" />
+      <PropertyRef Name="cCard_ID" />
+      <PropertyRef Name="iWorker_type" />
+      <PropertyRef Name="iSex" />
+      <PropertyRef Name="cNation_code" />
+      <PropertyRef Name="cDegree_code" />
+      <PropertyRef Name="lMarried" />
+      <PropertyRef Name="cWorker_Id" />
+      <PropertyRef Name="cState_code" />
+      <PropertyRef Name="cFather_name" />
+      <PropertyRef Name="cMather_name" />
+      <PropertyRef Name="cHome_tel" />
+      <PropertyRef Name="cHome_address" />
+      <PropertyRef Name="cVoucher" />
+      <PropertyRef Name="cDept_code" />
+      <PropertyRef Name="iTitle_ID" />
+      <PropertyRef Name="iSal_type" />
+      <PropertyRef Name="iCal_type" />
+      <PropertyRef Name="nSalary" />
+      <PropertyRef Name="cAccount" />
+      <PropertyRef Name="iFloor_ID" />
+      <PropertyRef Name="iGroup_ID" />
+      <PropertyRef Name="cShoe_code" />
+      <PropertyRef Name="lNo_to_bank" />
+      <PropertyRef Name="lSafety_flag" />
+      <PropertyRef Name="cSafety_no" />
+      <PropertyRef Name="lCity_flag" />
+      <PropertyRef Name="remarks" />
+      <PropertyRef Name="cStop_meal" />
+      <PropertyRef Name="cScan_loc" />
+      <PropertyRef Name="cAmend_user" />
+      <PropertyRef Name="cUser_id" />
+      <PropertyRef Name="lSub_hot_flag" />
+      <PropertyRef Name="cbox_code" />
+      <PropertyRef Name="msrepl_tran_version" />
+      <PropertyRef Name="cSupervisor_No" />
+      <PropertyRef Name="cEngName" />
+      <PropertyRef Name="nOther_Subsidy" />
+      <PropertyRef Name="cOther_Subsidy_Remark" />
+    </Key>
+    <Property Name="cWorker_no" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="cName" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="dbirthday" Type="date" />
+    <Property Name="cCard_ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="iWorker_type" Type="utinyint" Nullable="false" />
+    <Property Name="iSex" Type="utinyint" Nullable="false" />
+    <Property Name="cNation_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="cDegree_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="lMarried" Type="bit" Nullable="false" />
+    <Property Name="cWorker_Id" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="cState_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="cFather_name" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="cMather_name" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="cHome_tel" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="cHome_address" Type="longtext" Nullable="false" />
+    <Property Name="cVoucher" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="dHire_date" Type="date" />
+    <Property Name="cDept_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="iTitle_ID" Type="int" Nullable="false" />
+    <Property Name="iSal_type" Type="utinyint" Nullable="false" />
+    <Property Name="iCal_type" Type="utinyint" Nullable="false" />
+    <Property Name="nSalary" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="nAllowance" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="dCurr_sal_date" Type="datetime" Precision="0" />
+    <Property Name="cAccount" Type="varchar" MaxLength="19" Nullable="false" />
+    <Property Name="iFloor_ID" Type="int" Nullable="false" />
+    <Property Name="iGroup_ID" Type="int" Nullable="false" />
+    <Property Name="cShoe_code" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="dOut_date" Type="date" />
+    <Property Name="cOut_reason" Type="varchar" MaxLength="30" />
+    <Property Name="lNo_to_bank" Type="bit" Nullable="false" />
+    <Property Name="cNo_to_bank_reason" Type="varchar" MaxLength="20" />
+    <Property Name="lSafety_flag" Type="bit" Nullable="false" />
+    <Property Name="cSafety_no" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="lCity_flag" Type="bit" Nullable="false" />
+    <Property Name="lNew_subsidy" Type="bit" />
+    <Property Name="remarks" Type="longtext" Nullable="false" />
+    <Property Name="cStop_meal" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="cScan_loc" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="dAmend_date" Type="datetime" Precision="0" />
+    <Property Name="cAmend_user" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cUser_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lSub_hot_flag" Type="bit" Nullable="false" />
+    <Property Name="cbox_code" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="dperiod_of_validity_date" Type="date" />
+    <Property Name="dchg_title_date" Type="date" />
+    <Property Name="msrepl_tran_version" Type="longblob" Nullable="false" />
+    <Property Name="nhot_subsidy" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="cSupervisor_No" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="cEngName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="nOther_Subsidy" Type="decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="cOther_Subsidy_Remark" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_cal_type">
+    <Key>
+      <PropertyRef Name="ical_type" />
+    </Key>
+    <Property Name="ical_type" Type="utinyint" Nullable="false" />
+    <Property Name="ccal_desc" Type="varchar" MaxLength="6" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6013: 表/视图“def.employees.per_city_flag”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="per_city_flag">
+          <Property Name="l_t_code" Type="bit" />
+          <Property Name="ccityflag_desc" Type="varchar" MaxLength="3" />
+        </EntityType>-->
+  <EntityType Name="per_degree">
+    <Key>
+      <PropertyRef Name="cDegree_code" />
+    </Key>
+    <Property Name="cDegree_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="cDegree_desc" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="longblob" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_dept">
+    <Key>
+      <PropertyRef Name="cDept_code" />
+    </Key>
+    <Property Name="cDept_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="cDept_desc" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cprt_group" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="lfree_rest" Type="bit" Nullable="false" />
+    <Property Name="cdept_group" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ceng_desc" Type="varchar" MaxLength="30" />
+    <Property Name="cCal_salary" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="cdept_group2" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="longblob" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_floor">
+    <Key>
+      <PropertyRef Name="cFloor_code" />
+    </Key>
+    <Property Name="iFloor_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cFloor_code" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="cFloor_desc" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="longblob" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_group">
+    <Key>
+      <PropertyRef Name="iGroup_ID" />
+    </Key>
+    <Property Name="iGroup_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cgroup_desc" Type="varchar" MaxLength="10" />
+    <Property Name="cDept_code" Type="varchar" MaxLength="2" />
+    <Property Name="cStart_am" Type="varchar" MaxLength="8" />
+    <Property Name="cEnd_am" Type="varchar" MaxLength="8" />
+    <Property Name="cStart_noon" Type="varchar" MaxLength="8" />
+    <Property Name="cEnd_noon" Type="varchar" MaxLength="8" />
+    <Property Name="cStart_pm" Type="varchar" MaxLength="8" />
+    <Property Name="cEnd_pm" Type="varchar" MaxLength="8" />
+    <Property Name="cStart_tip" Type="varchar" MaxLength="8" />
+    <Property Name="dAmend_date" Type="datetime" Precision="0" />
+    <Property Name="cAmend_user" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="longblob" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_leave">
+    <Key>
+      <PropertyRef Name="iLeave_ID" />
+    </Key>
+    <Property Name="iLeave_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cWorker_no" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="dFrom_date" Type="datetime" Precision="0" />
+    <Property Name="dTo_Date" Type="datetime" Precision="0" />
+    <Property Name="creason_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="dAmend_Date" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="cAmend_user" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cRemarks" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6013: 表/视图“def.employees.per_marry”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="per_marry">
+          <Property Name="lmarry_code" Type="bit" />
+          <Property Name="cmarry_desc" Type="varchar" MaxLength="4" />
+        </EntityType>-->
+  <EntityType Name="per_nation">
+    <Key>
+      <PropertyRef Name="iNation_code" />
+    </Key>
+    <Property Name="iNation_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="cNation_desc" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="longblob" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_penalty">
+    <Key>
+      <PropertyRef Name="iID" />
+    </Key>
+    <Property Name="iID" Type="int" Nullable="false" />
+    <Property Name="dDate" Type="date" />
+    <Property Name="cWorker_no" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="cPenalty_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="cReason" Type="longtext" Nullable="false" />
+    <Property Name="nAmount" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="dPost_date" Type="datetime" Precision="0" />
+    <Property Name="cPost_user" Type="varchar" MaxLength="10" />
+    <Property Name="dAmend_date" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="cAmend_user" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_penalty_code">
+    <Key>
+      <PropertyRef Name="cPenalty_code" />
+    </Key>
+    <Property Name="cPenalty_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="cPenalty_desc" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="iPenalty_type" Type="utinyint" Nullable="false" />
+    <Property Name="lcount_flag" Type="bit" />
+    <Property Name="dAmend_date" Type="datetime" Precision="0" />
+    <Property Name="cAmend_user" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="per_penalty_type">
+    <Key>
+      <PropertyRef Name="iType_ID" />
+    </Key>
+    <Property Name="iType_ID" Type="utinyint" Nullable="false" />
+    <Property Name="cType_Desc" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cElse_Field" Type="varchar" MaxLength="20" />
+    <Property Name="dAmend_Date" Type="datetime" Precision="0" />
+    <Property Name="cAmend_User" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="per_room">
+    <Key>
+      <PropertyRef Name="iRoom_ID" />
+    </Key>
+    <Property Name="iRoom_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cHouse" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="cRoom_no" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="iCapacity" Type="int" Nullable="false" />
+    <Property Name="nTotal_Chest" Type="decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="nTotal_bed" Type="decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="nTotal_bedstand" Type="decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="nTotal_fanner" Type="decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="nTotal_E_lamp" Type="decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="nTotal_D_lamp" Type="decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="iSex" Type="utinyint" Nullable="false" />
+    <Property Name="iType" Type="utinyint" Nullable="false" />
+    <Property Name="mRemarks" Type="longtext" Nullable="false" />
+    <Property Name="damend_date" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="camend_user" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="longblob" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_sex">
+    <Key>
+      <PropertyRef Name="isex_code" />
+    </Key>
+    <Property Name="isex_code" Type="utinyint" Nullable="false" />
+    <Property Name="csex_desc" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="per_shoe">
+    <Key>
+      <PropertyRef Name="cShoe_code" />
+    </Key>
+    <Property Name="cShoe_code" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="cShoe_no" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="longblob" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_state">
+    <Key>
+      <PropertyRef Name="iState_code" />
+    </Key>
+    <Property Name="iState_code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="cState_Desc" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="longblob" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_title">
+    <Key>
+      <PropertyRef Name="iTitle_ID" />
+    </Key>
+    <Property Name="iTitle_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cDept_code" Type="varchar" MaxLength="2" />
+    <Property Name="cTitle_name" Type="varchar" MaxLength="12" />
+    <Property Name="nper_num" Type="decimal" Precision="7" Scale="0" Nullable="false" />
+    <Property Name="msrepl_tran_version" Type="longblob" Nullable="false" />
+    <Property Name="nsubsidy_sal" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="per_worker_type">
+    <Key>
+      <PropertyRef Name="iworker_type" />
+    </Key>
+    <Property Name="iworker_type" Type="utinyint" Nullable="false" />
+    <Property Name="cworker_desc" Type="varchar" MaxLength="4" />
+    <Property Name="ntest_month" Type="decimal" Precision="7" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="EmployeesEntitiesStoreContainer">
+    <EntitySet Name="per_cal_type" EntityType="Self.per_cal_type" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_degree" EntityType="Self.per_degree" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_dept" EntityType="Self.per_dept" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_floor" EntityType="Self.per_floor" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_group" EntityType="Self.per_group" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_leave" EntityType="Self.per_leave" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_nation" EntityType="Self.per_nation" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_penalty" EntityType="Self.per_penalty" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_penalty_code" EntityType="Self.per_penalty_code" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_penalty_type" EntityType="Self.per_penalty_type" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_room" EntityType="Self.per_room" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_sex" EntityType="Self.per_sex" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_shoe" EntityType="Self.per_shoe" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_state" EntityType="Self.per_state" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_title" EntityType="Self.per_title" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="per_worker_type" EntityType="Self.per_worker_type" Schema="employees" store:Type="Tables" />
+    <EntitySet Name="employee" EntityType="Self.employee" store:Type="Tables" store:Schema="employees">
+      <DefiningQuery>SELECT
+`employee`.`cWorker_no`, 
+`employee`.`cName`, 
+`employee`.`dbirthday`, 
+`employee`.`cCard_ID`, 
+`employee`.`iWorker_type`, 
+`employee`.`iSex`, 
+`employee`.`cNation_code`, 
+`employee`.`cDegree_code`, 
+`employee`.`lMarried`, 
+`employee`.`cWorker_Id`, 
+`employee`.`cState_code`, 
+`employee`.`cFather_name`, 
+`employee`.`cMather_name`, 
+`employee`.`cHome_tel`, 
+`employee`.`cHome_address`, 
+`employee`.`cVoucher`, 
+`employee`.`dHire_date`, 
+`employee`.`cDept_code`, 
+`employee`.`iTitle_ID`, 
+`employee`.`iSal_type`, 
+`employee`.`iCal_type`, 
+`employee`.`nSalary`, 
+`employee`.`nAllowance`, 
+`employee`.`dCurr_sal_date`, 
+`employee`.`cAccount`, 
+`employee`.`iFloor_ID`, 
+`employee`.`iGroup_ID`, 
+`employee`.`cShoe_code`, 
+`employee`.`dOut_date`, 
+`employee`.`cOut_reason`, 
+`employee`.`lNo_to_bank`, 
+`employee`.`cNo_to_bank_reason`, 
+`employee`.`lSafety_flag`, 
+`employee`.`cSafety_no`, 
+`employee`.`lCity_flag`, 
+`employee`.`lNew_subsidy`, 
+`employee`.`remarks`, 
+`employee`.`cStop_meal`, 
+`employee`.`cScan_loc`, 
+`employee`.`dAmend_date`, 
+`employee`.`cAmend_user`, 
+`employee`.`cUser_id`, 
+`employee`.`lSub_hot_flag`, 
+`employee`.`cbox_code`, 
+`employee`.`dperiod_of_validity_date`, 
+`employee`.`dchg_title_date`, 
+`employee`.`msrepl_tran_version`, 
+`employee`.`nhot_subsidy`, 
+`employee`.`cSupervisor_No`, 
+`employee`.`cEngName`, 
+`employee`.`nOther_Subsidy`, 
+`employee`.`cOther_Subsidy_Remark`
+FROM `employee` AS `employee`</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

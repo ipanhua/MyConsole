@@ -1,0 +1,10 @@
+D:\Development\Projects\MyConsole\MyConsole\bin\Debug\MyConsole.exe.config
+D:\Development\Projects\MyConsole\MyConsole\bin\Debug\MyConsole.exe
+D:\Development\Projects\MyConsole\MyConsole\bin\Debug\MyConsole.pdb
+D:\Development\Projects\MyConsole\MyConsole\bin\Debug\EntityFramework.dll
+D:\Development\Projects\MyConsole\MyConsole\bin\Debug\MySql.Data.dll
+D:\Development\Projects\MyConsole\MyConsole\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Development\Projects\MyConsole\MyConsole\bin\Debug\EntityFramework.xml
+D:\Development\Projects\MyConsole\MyConsole\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Development\Projects\MyConsole\MyConsole\obj\Debug\MyConsole.exe
+D:\Development\Projects\MyConsole\MyConsole\obj\Debug\MyConsole.pdb
